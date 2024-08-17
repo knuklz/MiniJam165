@@ -1,17 +1,17 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 @export var min:int #= 50
 @export var max:int #= 200
 #$Line2D
 @onready var xSP: int = randi_range(min,max)
 @onready var ySP: int = randi_range(min,max)
-
+@export var col: Color
 @onready var speed: Vector2 = Vector2(xSP,ySP)
 
 #@export var tr_Col: Color = Color(randf_range(.2,.8),randf_range(.2,.7),randf_range(.2,.8),.1)
 
 # Get the height and width of the sprite for checking boundaries
-@onready var height: Vector2 = texture.get_size()*scale
+@onready var height: Vector2 = sprite_frames.get_frame_texture("Right",0).get_size()*scale
 #var width: int = Texture.get_width()
 
 # Extract world boundaries from parent object
@@ -21,19 +21,20 @@ var wWidth: int = 500
 var trailHome: Vector2
 var trailOffset:= Vector2(0,0)
 # Variable to store the trail
-@onready var trail: Line2D = $Line2D
+@onready var trail: Line2D = $Trail
 @onready var world: Node2D = null
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#print($".".scale)
-	#trail.default_color = tr_Col
+	trail.default_color = col
 	trailHome = Vector2((height.x)/2,(height.y)/2)
 	trail.position = trailHome
 	world = get_parent()
 	wHeight = world.WORLD_HEIGHT
 	wWidth = world.WORLD_WIDTH
+	#trail.LineJointMode
 	#pass # Replace with function body.
 
 
@@ -50,18 +51,21 @@ func _process(delta: float) -> void:
 		speed.y = speed.y * -1
 	# Update the X position based on the speed variable  
 	position += speed*delta
+	bumpVelocity()
 
 func updateTrailOffset():
 	var dir:Vector2=checkDirection(speed)
 	if(dir.x == 1):
-		trailOffset.x = (height.x *-1)/2
+		trailOffset.x = (height.x *-.9)/2.5
+		animation = "Right"
 	else:
-		trailOffset.x = height.x/2	
+		trailOffset.x = (height.x*.9)/2.5
+		animation = "Left"
 		
-	if(dir.y == 1):
-		trailOffset.y = (height.y*-1)/2
-	else:
-		trailOffset.y = height.y/2	
+	#if(dir.y == 1):
+		#trailOffset.y = (height.y*-1)/2
+	#else:
+	trailOffset.y = height.y/2	
 
 func checkDirection(velocity: Vector2) -> Vector2:
 	var dir: Vector2 
@@ -69,3 +73,16 @@ func checkDirection(velocity: Vector2) -> Vector2:
 	dir.y = clamp(velocity.y,-1,1)
 	return dir
 	
+
+
+
+func bumpVelocity() -> void:
+	var Bscale:int = 20
+	if(randi_range(0,10) == 6):
+		var blep:int = randi_range(Bscale*-1,Bscale)
+		speed.x += blep
+		print(blep)
+	if(randi_range(0,10) == 5):
+		var blop:int = randi_range(Bscale*-1,Bscale)
+		speed.y += blop
+		print(blop)

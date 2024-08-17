@@ -6,5 +6,144 @@
 [node name="World" type="Node2D"]
 script = ExtResource("1_m3iqr")
 
-[node name="Icon" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
+[node name="Light" parent="." instance=ExtResource("2_novlu")]
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark" parent="." instance=ExtResource("2_novlu")]
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light2" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark2" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light3" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark3" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light4" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark4" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light5" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark5" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light6" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark6" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light7" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark7" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light8" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark8" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light9" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark9" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light10" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark10" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light11" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark11" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light12" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark12" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light13" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark13" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light14" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark14" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light15" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark15" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
+
+[node name="Light16" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(1, 1, 1, 0.1)
+
+[node name="Dark16" parent="." instance=ExtResource("2_novlu")]
+frame_progress = 0.174545
+max = 120
+col = Color(0, 0, 0, 0.1)
