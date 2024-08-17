@@ -114,11 +114,11 @@ animations = [{
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ggyr6")
 animation = &"Right"
-frame_progress = 0.423204
+frame_progress = 0.789997
 centered = false
 script = ExtResource("2_gbsqb")
 min = 50
-max = 200
+max = 100
 col = Color(1, 1, 1, 0.443137)
 
 [node name="Trail" type="Line2D" parent="."]

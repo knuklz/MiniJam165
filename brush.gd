@@ -36,6 +36,7 @@ func _ready() -> void:
 	wWidth = world.WORLD_WIDTH
 	#trail.LineJointMode
 	#pass # Replace with function body.
+	#autoplay = rue
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,10 +58,10 @@ func updateTrailOffset():
 	var dir:Vector2=checkDirection(speed)
 	if(dir.x == 1):
 		trailOffset.x = (height.x *-.9)/2.5
-		animation = "Right"
+		play("Right") 
 	else:
 		trailOffset.x = (height.x*.9)/2.5
-		animation = "Left"
+		play("Left")
 		
 	#if(dir.y == 1):
 		#trailOffset.y = (height.y*-1)/2
@@ -77,12 +78,14 @@ func checkDirection(velocity: Vector2) -> Vector2:
 
 
 func bumpVelocity() -> void:
-	var Bscale:int = 20
-	if(randi_range(0,10) == 6):
+	var Bscale:int = 5
+	if(randi_range(0,50) == 6):
 		var blep:int = randi_range(Bscale*-1,Bscale)
-		speed.x += blep
-		print(blep)
-	if(randi_range(0,10) == 5):
+		speed.x +=  clamp(blep,-100,100)
+		#print(blep)
+	if(randi_range(0,50) == 5):
 		var blop:int = randi_range(Bscale*-1,Bscale)
-		speed.y += blop
-		print(blop)
+		speed.y += clamp(blop,-100,100)
+		#print(blop)
+		#clamp(speed.x,-100,100)
+		
