@@ -31,7 +31,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	trail.add_point(global_position)
+	trail.add_point(position)
+	
+	
 	if((position.x >=  (wWidth-height.x) and (speed.x > 0)) or (position.x<=0) and speed.x <0):
 		speed.x = speed.x * -1
 		

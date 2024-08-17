@@ -1,19 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://kcw1lt6fjmpi"]
+[gd_scene load_steps=3 format=3 uid="uid://kcw1lt6fjmpi"]
 
-[ext_resource type="Texture2D" uid="uid://bug86wd61wybv" path="res://icon.svg" id="1_28x2s"]
 [ext_resource type="Script" path="res://main.gd" id="1_m3iqr"]
-[ext_resource type="Script" path="res://brush.gd" id="3_n81q4"]
+[ext_resource type="PackedScene" uid="uid://gsaaex7deay3" path="res://Brush.tscn" id="2_novlu"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_m3iqr")
 
-[node name="Icon" type="Sprite2D" parent="."]
-texture = ExtResource("1_28x2s")
-centered = false
-script = ExtResource("3_n81q4")
+[node name="Icon" parent="." instance=ExtResource("2_novlu")]
 
-[node name="Line2D" type="Line2D" parent="Icon"]
-top_level = true
-z_index = -1
-points = PackedVector2Array(0, 0)
-default_color = Color(0, 0, 0, 1)
+[node name="Icon2" parent="." instance=ExtResource("2_novlu")]
+position = Vector2(48, 160)
+
+[node name="Icon3" parent="." instance=ExtResource("2_novlu")]
+position = Vector2(264, 32)
