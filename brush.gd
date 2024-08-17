@@ -54,9 +54,14 @@ func _process(delta: float) -> void:
 func updateTrailOffset():
 	var dir:Vector2=checkDirection(speed)
 	if(dir.x == 1):
-		trailOffset = Vector2((height*-1).x/2,0)
+		trailOffset.x = (height.x *-1)/2
 	else:
-		trailOffset = Vector2(height.x/2,0)	
+		trailOffset.x = height.x/2	
+		
+	if(dir.y == 1):
+		trailOffset.y = (height.y*-1)/2
+	else:
+		trailOffset.y = height.y/2	
 
 func checkDirection(velocity: Vector2) -> Vector2:
 	var dir: Vector2 
