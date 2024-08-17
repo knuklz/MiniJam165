@@ -7,10 +7,10 @@
 texture = ExtResource("1_pk1aj")
 centered = false
 script = ExtResource("2_gbsqb")
+min = 333
+max = 125
 
 [node name="Line2D" type="Line2D" parent="."]
 top_level = true
 z_index = -1
-position = Vector2(64, 64)
 points = PackedVector2Array(0, 0)
-default_color = Color(0, 0, 0, 1)
