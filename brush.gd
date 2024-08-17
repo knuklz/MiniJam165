@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var speed: int = 50
+@export var speed: Vector2 
 
 
 # Get the height and width of the sprite for checking boundaries
@@ -24,10 +24,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	
-	if((position.x >=  (wWidth-height.x) and (speed > 0)) or (position.x<=0) and speed <0):
-		speed = speed * -1
+	if((position.x >=  (wWidth-height.x) and (speed.x > 0)) or (position.x<=0) and speed.x <0):
+		speed.x = speed.x * -1
+		
+	if((position.y >=  (wHeight-height.x) and (speed.y > 0)) or (position.y<=0) and speed.y <0):
+		speed.y = speed.y * -1
 	# Update the X position based on the speed variable  
-	position.x += speed*delta
+	position += speed*delta
 	
 	
 	#Sprite2D.texture.get_height()
