@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://gsaaex7deay3"]
+
+[ext_resource type="Texture2D" uid="uid://bug86wd61wybv" path="res://icon.svg" id="1_pk1aj"]
+[ext_resource type="Script" path="res://brush.gd" id="2_gbsqb"]
+
+[node name="Icon" type="Sprite2D"]
+texture = ExtResource("1_pk1aj")
+centered = false
+script = ExtResource("2_gbsqb")
+min = 333
+max = 125
+
+[node name="Line2D" type="Line2D" parent="."]
+top_level = true
+z_index = -1
+points = PackedVector2Array(0, 0)
