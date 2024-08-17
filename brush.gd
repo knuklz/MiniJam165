@@ -7,9 +7,8 @@ var ySP: int = randi_range(10,200)
 
 @export var speed: Vector2 = Vector2(xSP,ySP)
 # Get the height and width of the sprite for checking boundaries
-var height: Vector2 = $".".texture.get_size()
+var height: Vector2 = $".".texture.get_size() * $".".scale
 #var width: int = Texture.get_width()
-
 
 # Extract world boundaries from parent object
 # World boundaries are hard coded in the brush script for now until I figure out how to properly pass variables between scripts. 
@@ -25,6 +24,7 @@ var wWidth: int = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#print($".".scale)
 	pass # Replace with function body.
 
 
@@ -39,10 +39,6 @@ func _process(delta: float) -> void:
 		speed.y = speed.y * -1
 	# Update the X position based on the speed variable  
 	position += speed*delta
-	
-	
-	#Sprite2D.texture.get_height()
-	#print($"..".WORLD_HEIGHT)
 
 
 func checkBound():
