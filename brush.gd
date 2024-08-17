@@ -7,7 +7,7 @@ var ySP: int = randi_range(10,200)
 
 @export var speed: Vector2 = Vector2(xSP,ySP)
 # Get the height and width of the sprite for checking boundaries
-var height: Vector2 = $".".texture.get_size() * $".".scale
+var height: Vector2 = texture.get_size()
 #var width: int = Texture.get_width()
 
 # Extract world boundaries from parent object
