@@ -1,8 +1,11 @@
 extends Sprite2D
 
-@export var speed: Vector2 
 
+#$Line2D
+var xSP: int = randi_range(10,200)
+var ySP: int = randi_range(10,200)
 
+@export var speed: Vector2 = Vector2(xSP,ySP)
 # Get the height and width of the sprite for checking boundaries
 var height: Vector2 = $".".texture.get_size()
 #var width: int = Texture.get_width()
@@ -14,6 +17,11 @@ var wHeight: int = 500
 var wWidth: int = 500
 
 
+# Variable to store the trail
+@onready var trail: Line2D = $Line2D
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +31,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	
+	trail.add_point(global_position)
 	if((position.x >=  (wWidth-height.x) and (speed.x > 0)) or (position.x<=0) and speed.x <0):
 		speed.x = speed.x * -1
 		

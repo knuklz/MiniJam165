@@ -11,4 +11,9 @@ script = ExtResource("1_m3iqr")
 texture = ExtResource("1_28x2s")
 centered = false
 script = ExtResource("3_n81q4")
-speed = Vector2(80, 30)
+
+[node name="Line2D" type="Line2D" parent="Icon"]
+top_level = true
+position = Vector2(64, 64)
+points = PackedVector2Array(0, 0)
+default_color = Color(0, 0, 0, 1)
