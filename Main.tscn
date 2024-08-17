@@ -8,36 +8,3 @@ script = ExtResource("1_m3iqr")
 
 [node name="Icon" parent="." instance=ExtResource("2_novlu")]
 scale = Vector2(0.28, 0.28)
-
-[node name="Icon2" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon3" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon4" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon5" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon6" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon7" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon8" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon9" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon10" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon11" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
-
-[node name="Icon12" parent="." instance=ExtResource("2_novlu")]
-scale = Vector2(0.28, 0.28)
